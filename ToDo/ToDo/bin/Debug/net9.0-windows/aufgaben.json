@@ -1,0 +1,50 @@
+[
+  {
+    "art": "Einkaufen",
+    "tage": 2,
+    "punkte": 50,
+    "aufgabeHinzugef\u00FCgt": "10.07.2025"
+  },
+  {
+    "art": "M\u00FCll rausbringen",
+    "tage": 1,
+    "punkte": 100,
+    "aufgabeHinzugef\u00FCgt": "10.07.2025"
+  },
+  {
+    "art": "Kochen",
+    "tage": 1,
+    "punkte": 50,
+    "aufgabeHinzugef\u00FCgt": "10.07.2025"
+  },
+  {
+    "art": "Bad reinigen",
+    "tage": 10,
+    "punkte": 75,
+    "aufgabeHinzugef\u00FCgt": "09.07.2025"
+  },
+  {
+    "art": "WC sauber machen",
+    "tage": 7,
+    "punkte": 100,
+    "aufgabeHinzugef\u00FCgt": "09.07.2025"
+  },
+  {
+    "art": "Gelben Sack wegbringen",
+    "tage": 7,
+    "punkte": 50,
+    "aufgabeHinzugef\u00FCgt": "09.07.2025"
+  },
+  {
+    "art": "Keller aufr\u00E4umen",
+    "tage": 50,
+    "punkte": 100,
+    "aufgabeHinzugef\u00FCgt": "10.07.2025"
+  },
+  {
+    "art": "Marcel \u00E4rgern",
+    "tage": 1,
+    "punkte": 50,
+    "aufgabeHinzugef\u00FCgt": "10.07.2025"
+  }
+]

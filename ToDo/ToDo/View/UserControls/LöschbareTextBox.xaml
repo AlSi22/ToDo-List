@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="ToDo.View.UserControls.LöschbareTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ToDo.View.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="250">
+    
+    <Grid Background="Red">
+        <TextBox    x:Name="txtInput" VerticalContentAlignment="Center" 
+                    FontSize="16" FontWeight="Light" Background="Transparent"
+                    TextChanged="txtInput_TextChanged" Text="{Binding Art, Mode=TwoWay}" 
+        />
+        <!-- UpdateSourceTrigger=PropertyChanged}"/> -->
+        
+        <TextBlock x:Name="tbPlaceholder" Text="{Binding Placeholder}"
+                   FontSize="16" FontWeight="Light"
+                   Foreground="DarkGreen" VerticalAlignment="Center" Margin="25,0,0,0"
+                   Panel.ZIndex="-1"
+       />
+        <!-- Zindex setzt TextBlock unter TextBox -->
+        <Button x:Name="btnClear" Width="30" HorizontalAlignment="Right" Content="X"
+                Background="Transparent" Foreground="LightGray" BorderThickness="0"
+                Click="btnClear_Click"/>
+    </Grid>
+</UserControl>
+

@@ -1,0 +1,43 @@
+﻿<Window x:Class="ToDo.View.Verena.VerenaListe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToDo.View.Verena"
+        mc:Ignorable="d"
+        Title="VerenaListe" Height="450" Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <ListBox    ItemsSource="{Binding VerenaListe}" Width="400" Height="175"
+                        x:Name="VerenaListBox">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Text}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button             x:Name="EntfernVerena" Content="Erledigt" 
+                                Grid.Column="0"
+                                Width="150" Height="100"
+                                Click="Button_Click">
+
+            </Button>
+
+            <TextBlock          Foreground="Gold" 
+                                Grid.Column="1" Height="50" Width="100" FontSize="14" FontWeight="Bold"
+                                Text="{Binding VerenaPunkte}">
+            </TextBlock>
+        </Grid>
+    </Grid>
+</Window>
