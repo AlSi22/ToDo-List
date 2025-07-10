@@ -1,11 +1,11 @@
 Eine To-Do-App in C# mit WPF und MVVM-Struktur.
 
 Funktionen (Stand: 10.07.2025)
-Aufgaben erstellen, bearbeiten und löschen
-Aufgaben persistent speichern (JSON)
-Wiederkehrende Aufgaben mit einstellbarem Intervall
-Sortierung
-Separate Fenster für Speziallisten (z. B. wiederkehrende Aufgaben)
+Aufgaben erstellen, bearbeiten und löschen,
+Aufgaben persistent speichern (JSON),
+Wiederkehrende Aufgaben mit einstellbarem Intervall,
+Sortierung,
+Separate Fenster für Aufgabenaufteilung
 
 Ziel
 Diese Anwendung entsteht im Rahmen meiner Umschulung zum Fachinformatiker für Anwendungsentwicklung.
@@ -20,5 +20,3 @@ JSON (System.Text.Json)
 .NET 9
 
 Alex Siebenson
-
-Teilnehmer der DEKRA-Umschulung zum Fachinformatiker Anwendungsentwicklung (Abschluss: August 2026)
