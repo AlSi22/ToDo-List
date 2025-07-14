@@ -6,21 +6,21 @@
         xmlns:local="clr-namespace:ToDo.View.Alex"
         xmlns:UserControls="clr-namespace:ToDo.View.UserControls"
         mc:Ignorable="d"
-        Title="AlexJob" Height="300" Width="500">
+        Title="AlexJob" Height="300" Width="300">
 
     <Grid Background="#4682B4">
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="200"/>
             <RowDefinition/>
 
         </Grid.RowDefinitions>
 
     
-        <ListBox AlternationCount="2"
-                 x:Name="AlexListBox"
-                 ItemsSource="{Binding AlexListe}"
-                 Width="400" Height="175"
-                 Background="#F08080">
+        <ListBox    AlternationCount="2"
+                    x:Name="AlexListBox"
+                    ItemsSource="{Binding AlexListe}"
+                    Width="250" Height="175"
+                    Background="#F08080">
           
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">

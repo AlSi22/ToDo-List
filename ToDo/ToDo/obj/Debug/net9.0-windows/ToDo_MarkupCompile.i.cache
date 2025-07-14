@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Alex\Desktop\Projekt\ToDo-List\ToDo\ToDo\obj\Debug\net9.0-windows\
+C:\Users\Alex\Desktop\Projekt\Projekt\ToDo\ToDo\obj\Debug\net9.0-windows\
 ToDo
 none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\Alex\Desktop\Projekt\ToDo-List\ToDo\ToDo\App.xaml
+C:\Users\Alex\Desktop\Projekt\Projekt\ToDo\ToDo\App.xaml
 61143939362
 
 18-1421294240
 2001466749558
 View\Alex\AlexListe.xaml;View\Aufgabenliste\Aufgabenliste.xaml;View\Main\MainWindow.xaml;View\UserControls\Listen.xaml;View\UserControls\LöschbareTextBox.xaml;View\Verena\VerenaListe.xaml;
 
-False
+True
 

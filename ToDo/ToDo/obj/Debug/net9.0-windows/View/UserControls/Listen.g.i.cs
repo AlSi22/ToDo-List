@@ -53,7 +53,7 @@ namespace ToDo.View.UserControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ToDo;V1.0.0.0;component/view/usercontrols/listen.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ToDo;component/view/usercontrols/listen.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\UserControls\Listen.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

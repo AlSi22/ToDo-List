@@ -70,7 +70,7 @@ namespace ToDo.View.Alex {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ToDo;V1.0.0.0;component/view/alex/alexliste.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ToDo;component/view/alex/alexliste.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\Alex\AlexListe.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

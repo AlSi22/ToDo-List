@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|c:\\users\\alex\\desktop\\projekt\\projekt\\todo\\todo\\view\\main\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|solutionrelative:todo\\view\\main\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|c:\\users\\alex\\desktop\\projekt\\projekt\\todo\\todo\\view\\verena\\verenaliste.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|solutionrelative:todo\\view\\verena\\verenaliste.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|c:\\users\\alex\\desktop\\projekt\\projekt\\todo\\todo\\view\\alex\\alexliste.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|solutionrelative:todo\\view\\alex\\alexliste.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|c:\\users\\alex\\desktop\\projekt\\projekt\\todo\\todo\\view\\aufgabenliste\\aufgabenliste.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|solutionrelative:todo\\view\\aufgabenliste\\aufgabenliste.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,30 +27,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\View\\Main\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "ToDo\\View\\Main\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\View\\Main\\MainWindow.xaml",
-              "RelativeToolTip": "ToDo\\View\\Main\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-14T07:48:27.451Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Aufgabenliste.xaml",
-              "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\View\\Aufgabenliste\\Aufgabenliste.xaml",
-              "RelativeDocumentMoniker": "ToDo\\View\\Aufgabenliste\\Aufgabenliste.xaml",
-              "ToolTip": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\View\\Aufgabenliste\\Aufgabenliste.xaml",
-              "RelativeToolTip": "ToDo\\View\\Aufgabenliste\\Aufgabenliste.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-14T07:27:11.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "VerenaListe.xaml",
               "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\View\\Verena\\VerenaListe.xaml",
               "RelativeDocumentMoniker": "ToDo\\View\\Verena\\VerenaListe.xaml",
@@ -70,7 +38,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AlexListe.xaml",
               "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\View\\Alex\\AlexListe.xaml",
               "RelativeDocumentMoniker": "ToDo\\View\\Alex\\AlexListe.xaml",

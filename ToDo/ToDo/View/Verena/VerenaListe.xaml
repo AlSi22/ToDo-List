@@ -6,18 +6,18 @@
         xmlns:local="clr-namespace:ToDo.View.Verena"
         xmlns:UserControls="clr-namespace:ToDo.View.UserControls"
         mc:Ignorable="d"
-        Title="VerenaListe" Height="300" Width="500">
+        Title="VerenaJob" Height="300" Width="300">
 
     <Grid Background="#4682B4">
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="200"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ListBox AlternationCount="2"
-         x:Name="VerenaListBox"
-         ItemsSource="{Binding VerenaListe}"
-         Width="400" Height="175"
-         Background="#F08080">
+        <ListBox    AlternationCount="2"
+                    x:Name="VerenaListBox"
+                    ItemsSource="{Binding VerenaListe}"
+                    Width="250" Height="175"
+                    Background="#F08080">
 
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">

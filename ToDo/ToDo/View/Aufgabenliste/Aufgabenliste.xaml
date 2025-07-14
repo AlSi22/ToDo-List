@@ -7,7 +7,7 @@
         xmlns:vm="clr-namespace:ToDo.ViewModel.Aufgaben"
         xmlns:UserControls="clr-namespace:ToDo.View.UserControls"
         mc:Ignorable="d"
-        Title="Aufgabenliste" Height="450" Width="400">
+        Title="Aufgabenliste" Height="600" Width="375">
 
     <Grid Background="#4682B4">
         <Grid.RowDefinitions>
@@ -23,7 +23,7 @@
             <UserControls:LöschbareTextBox  Width="250" Height="40" Margin="0,0,0,5"
                                             Placeholder="Punkte" x:Name="PunkteTextBox"/>
 
-            <Button Content="Hinzufügen" Click="Button_Click" x:Name="Hinzufügen" Width="75" Background="#F5FFFA" Foreground="#4682B4" FontWeight="Bold"/>
+            <Button Content="Hinzufügen" Click="Button_Click" x:Name="Hinzufügen" Width="75" Background="#F5FFFA" Foreground="#4682B4" FontWeight="Bold" Height="40"/>
         </StackPanel>
         <DataGrid   Grid.Row="1" Grid.Column="0"
                     ItemsSource="{Binding Aufgabenliste}"
@@ -33,11 +33,33 @@
                     x:Name="AufgabenListbox"
                     Background="#F08080"
                     Foreground="#4682B4">
+            <DataGrid.Resources>
+                <!-- Zeilen-Hintergrund -->
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="#F08080"/>
+                    <Setter Property="Foreground" Value="#4682B4"/>
+                    <Setter Property="BorderBrush" Value="#F08080"/>
+                </Style>
+
+                <!-- Zellen-Hintergrund -->
+                <Style TargetType="DataGridCell">
+                    <Setter Property="Background" Value="#F08080"/>
+                    <Setter Property="Foreground" Value="#4682B4"/>
+                    <Setter Property="BorderBrush" Value="#F08080"/>
+                </Style>
+
+                <!-- Spaltenkopf-Hintergrund -->
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#F08080"/>
+                    <Setter Property="Foreground" Value="#4682B4"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                </Style>
+            </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Aufgabe" Binding="{Binding Art}" />
-                <DataGridTextColumn Header="Tage" Binding="{Binding Tage}" />
-                <DataGridTextColumn Header="Punkte" Binding="{Binding Punkte}" />
-                <DataGridTextColumn Header="Datum" Binding="{Binding AufgabeHinzugefügt, StringFormat='{}{0:dd.MM.yyyy}'}" />
+                <DataGridTextColumn Header="Aufgabe" Binding="{Binding Art}" Width="150" />
+                <DataGridTextColumn Header="Tage" Binding="{Binding Tage}" Width="50"/>
+                <DataGridTextColumn Header="Punkte" Binding="{Binding Punkte}" Width="50"/>
+                <DataGridTextColumn Header="Datum" Binding="{Binding AufgabeHinzugefügt, StringFormat='{}{0:dd.MM.yyyy}'}" Width="100" />
             </DataGrid.Columns>
         </DataGrid>
         <Button     Content="Entfernen" Click="Button_Click" x:Name="Entfernen"

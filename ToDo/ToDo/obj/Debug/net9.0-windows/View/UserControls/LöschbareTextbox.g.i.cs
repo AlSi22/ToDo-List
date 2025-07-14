@@ -77,7 +77,7 @@ namespace ToDo.View.UserControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ToDo;V1.0.0.0;component/view/usercontrols/l%c3%b6schbaretextbox.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ToDo;component/view/usercontrols/l%c3%b6schbaretextbox.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\UserControls\LöschbareTextBox.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
