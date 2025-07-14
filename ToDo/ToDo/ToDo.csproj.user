@@ -8,6 +8,9 @@
     <Compile Update="View\Aufgabenliste\Aufgabenliste.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\UserControls\Listen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\UserControls\LöschbareTextBox.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

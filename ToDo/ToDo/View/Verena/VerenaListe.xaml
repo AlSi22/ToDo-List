@@ -4,37 +4,55 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDo.View.Verena"
+        xmlns:UserControls="clr-namespace:ToDo.View.UserControls"
         mc:Ignorable="d"
-        Title="VerenaListe" Height="450" Width="800">
+        Title="VerenaListe" Height="300" Width="500">
 
-    <Grid>
+    <Grid Background="#4682B4">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <ListBox AlternationCount="2"
+         x:Name="VerenaListBox"
+         ItemsSource="{Binding VerenaListe}"
+         Width="400" Height="175"
+         Background="#F08080">
 
-        <ListBox    ItemsSource="{Binding VerenaListe}" Width="400" Height="175"
-                        x:Name="VerenaListBox">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Style.Triggers>
+                        <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                            <Setter Property="Background" Value="#F01000"/>
+
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ListBox.ItemContainerStyle>
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Text}" />
+                    <TextBlock Text="{Binding Text}" FontWeight="Bold" VerticalAlignment="Center" Foreground="#4682B4"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+                <ColumnDefinition  Width="125"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <Button             x:Name="EntfernVerena" Content="Erledigt" 
                                 Grid.Column="0"
-                                Width="150" Height="100"
-                                Click="Button_Click">
+                                Width="100" Height="50"
+                                Click="Button_Click"
+                                Background="#F5FFFA"
+                                FontWeight="Bold"
+                                Foreground="#4682B4">
 
             </Button>
 
-            <TextBlock          Foreground="Gold" 
+            <TextBlock          Foreground="#F08080" 
                                 Grid.Column="1" Height="50" Width="100" FontSize="14" FontWeight="Bold"
                                 Text="{Binding VerenaPunkte}">
             </TextBlock>

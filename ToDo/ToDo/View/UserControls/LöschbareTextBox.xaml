@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:ToDo.View.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="40" d:DesignWidth="250">
-    
-    <Grid Background="Red">
+
+    <Grid Background="#F08080">
         <TextBox    x:Name="txtInput" VerticalContentAlignment="Center" 
                     FontSize="16" FontWeight="Light" Background="Transparent"
                     TextChanged="txtInput_TextChanged" Text="{Binding Art, Mode=TwoWay}" 

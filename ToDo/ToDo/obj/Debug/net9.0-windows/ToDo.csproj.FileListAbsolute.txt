@@ -109,3 +109,7 @@ C:\Users\alexa\Desktop\Dekra\GitHub\wpf\Projekt\ToDo\ToDo\obj\Debug\net9.0-windo
 C:\Users\alexa\Desktop\Dekra\GitHub\wpf\Projekt\ToDo\ToDo\obj\Debug\net9.0-windows\ToDo.pdb
 C:\Users\alexa\Desktop\Dekra\GitHub\wpf\Projekt\ToDo\ToDo\obj\Debug\net9.0-windows\ToDo.genruntimeconfig.cache
 C:\Users\alexa\Desktop\Dekra\GitHub\wpf\Projekt\ToDo\ToDo\obj\Debug\net9.0-windows\ref\ToDo.dll
+C:\Users\alexa\Desktop\Dekra\GitHub\wpf\Projekt\ToDo\ToDo\obj\Debug\net9.0-windows\View\UserControls\Listen.g.cs
+C:\Users\alexa\Desktop\Dekra\GitHub\wpf\Projekt\ToDo\ToDo\obj\Debug\net9.0-windows\View\UserControls\Listen.baml
+C:\Users\Alex\Desktop\Projekt\Projekt\ToDo\ToDo\obj\Debug\net9.0-windows\View\UserControls\Listen.g.cs
+C:\Users\Alex\Desktop\Projekt\Projekt\ToDo\ToDo\obj\Debug\net9.0-windows\View\UserControls\Listen.baml

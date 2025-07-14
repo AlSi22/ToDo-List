@@ -7,13 +7,13 @@
         xmlns:vm="clr-namespace:ToDo.ViewModel.Aufgaben"
         xmlns:UserControls="clr-namespace:ToDo.View.UserControls"
         mc:Ignorable="d"
-        Title="Aufgabenliste" Height="450" Width="300">
-  
-    <Grid>
+        Title="Aufgabenliste" Height="450" Width="400">
+
+    <Grid Background="#4682B4">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <StackPanel Margin="5">
             <UserControls:LöschbareTextBox  Width="250" Height="40" Margin="0,0,0,5" 
@@ -22,15 +22,17 @@
                                             Placeholder="Tage" x:Name="TageTextBox"/>
             <UserControls:LöschbareTextBox  Width="250" Height="40" Margin="0,0,0,5"
                                             Placeholder="Punkte" x:Name="PunkteTextBox"/>
-   
-            <Button Content="Hinzufügen" Click="Button_Click" x:Name="Hinzufügen"/>
+
+            <Button Content="Hinzufügen" Click="Button_Click" x:Name="Hinzufügen" Width="75" Background="#F5FFFA" Foreground="#4682B4" FontWeight="Bold"/>
         </StackPanel>
-        <DataGrid Grid.Row="1" Grid.Column="0"
-              ItemsSource="{Binding Aufgabenliste}"
-              Margin="10"
-              IsReadOnly="True"
-              AutoGenerateColumns="False"
-                 x:Name="AufgabenListbox">
+        <DataGrid   Grid.Row="1" Grid.Column="0"
+                    ItemsSource="{Binding Aufgabenliste}"
+                    Margin="10"
+                    IsReadOnly="True"
+                    AutoGenerateColumns="False"
+                    x:Name="AufgabenListbox"
+                    Background="#F08080"
+                    Foreground="#4682B4">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Aufgabe" Binding="{Binding Art}" />
                 <DataGridTextColumn Header="Tage" Binding="{Binding Tage}" />
@@ -39,7 +41,8 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button     Content="Entfernen" Click="Button_Click" x:Name="Entfernen"
-                    Grid.Row="2" Height="50" Width="75"/>
+                    Grid.Row="2" Height="50" Width="75" Background="#F5FFFA"
+                    FontWeight="Bold" Foreground="#4682B4"/>
 
     </Grid>
     

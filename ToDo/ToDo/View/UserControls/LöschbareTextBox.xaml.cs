@@ -60,9 +60,10 @@ namespace ToDo.View.UserControls
         }
 
         public static readonly DependencyProperty TextProperty =
-    DependencyProperty.Register(
-        "Text", typeof(string), typeof(LöschbareTextBox),
-        new FrameworkPropertyMetadata(string.Empty, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnTextChanged));
+                        DependencyProperty.Register(
+                        "Text", typeof(string), typeof(LöschbareTextBox),
+                        new FrameworkPropertyMetadata(string.Empty, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, 
+                            OnTextChanged));
 
         public string Text
         {

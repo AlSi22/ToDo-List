@@ -1,8 +1,19 @@
 {
-  "Liste": [],
+  "Liste": [
+    {
+      "Text": "Einkaufen"
+    }
+  ],
   "AlexListe": [],
-  "VerenaListe": [],
-  "AlexPunkte": 0,
+  "VerenaListe": [
+    {
+      "Text": "Kochen"
+    },
+    {
+      "Text": "M\u00FCll rausbringen"
+    }
+  ],
+  "AlexPunkte": 50,
   "VerenaPunkte": 0,
-  "Winner": "Der letzte Sieger ist Alex"
+  "Winner": "Das letzte Mal hat Niemand gewonnen"
 }
