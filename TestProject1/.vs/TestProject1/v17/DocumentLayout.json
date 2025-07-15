@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\TestProject1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E7B81897-C40B-44D4-8396-C4B538F335CD}|TestProject1\\TestProject1.csproj|c:\\users\\alex\\desktop\\projekt\\projekt\\testproject1\\testproject1\\aufgabenviewmodel-test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7B81897-C40B-44D4-8396-C4B538F335CD}|TestProject1\\TestProject1.csproj|solutionrelative:testproject1\\aufgabenviewmodel-test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7B81897-C40B-44D4-8396-C4B538F335CD}|TestProject1\\TestProject1.csproj|c:\\users\\alex\\desktop\\projekt\\projekt\\testproject1\\testproject1\\testjsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7B81897-C40B-44D4-8396-C4B538F335CD}|TestProject1\\TestProject1.csproj|solutionrelative:testproject1\\testjsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7B81897-C40B-44D4-8396-C4B538F335CD}|TestProject1\\TestProject1.csproj|c:\\users\\alex\\desktop\\projekt\\projekt\\testproject1\\testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7B81897-C40B-44D4-8396-C4B538F335CD}|TestProject1\\TestProject1.csproj|solutionrelative:testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7B81897-C40B-44D4-8396-C4B538F335CD}|TestProject1\\TestProject1.csproj|c:\\users\\alex\\desktop\\projekt\\projekt\\testproject1\\testproject1\\testdialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7B81897-C40B-44D4-8396-C4B538F335CD}|TestProject1\\TestProject1.csproj|solutionrelative:testproject1\\testdialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AufgabenViewModel-Test.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\TestProject1\\TestProject1\\AufgabenViewModel-Test.cs",
+              "RelativeDocumentMoniker": "TestProject1\\AufgabenViewModel-Test.cs",
+              "ToolTip": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\TestProject1\\TestProject1\\AufgabenViewModel-Test.cs",
+              "RelativeToolTip": "TestProject1\\AufgabenViewModel-Test.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T11:15:41.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\TestProject1\\TestProject1\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject1\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\TestProject1\\TestProject1\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject1\\UnitTest1.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T08:31:29.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TestDialog.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\TestProject1\\TestProject1\\TestDialog.cs",
+              "RelativeDocumentMoniker": "TestProject1\\TestDialog.cs",
+              "ToolTip": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\TestProject1\\TestProject1\\TestDialog.cs",
+              "RelativeToolTip": "TestProject1\\TestDialog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T08:27:03.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TestJsonService.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\TestProject1\\TestProject1\\TestJsonService.cs",
+              "RelativeDocumentMoniker": "TestProject1\\TestJsonService.cs",
+              "ToolTip": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\TestProject1\\TestProject1\\TestJsonService.cs",
+              "RelativeToolTip": "TestProject1\\TestJsonService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T06:45:18.502Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
