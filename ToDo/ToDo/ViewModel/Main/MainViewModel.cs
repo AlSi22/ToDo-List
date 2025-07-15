@@ -26,7 +26,7 @@ using ToDo.ViewModel.Aufgaben;
 
 namespace ToDo.ViewModel.Main
 {
-     // Ort der Logik
+    // Ort der Logik
     public class MainViewModel : INotifyPropertyChanged
     {
         private readonly InterfaceJsonService _jsonService;
@@ -48,14 +48,14 @@ namespace ToDo.ViewModel.Main
                 }
             }
         }
-        public ObservableCollection<string> Vorschläge { get; set; } = new();   
+        public ObservableCollection<string> Vorschläge { get; set; } = new();
 
         private void AktualisiereVorschläge()
         {
             Vorschläge.Clear();
 
             if (string.IsNullOrWhiteSpace(EingabeText)) return;
-            
+
             var itsamatch = _aufgabenViewModel.Aufgabenliste
                 .Where(a => a.Art.Contains(EingabeText, StringComparison.OrdinalIgnoreCase))
                 .Select(a => a.Art)
@@ -75,7 +75,7 @@ namespace ToDo.ViewModel.Main
                 {
                     _ausgewählterVorschlag = value;
 
-                    _eingabeText = value; 
+                    _eingabeText = value;
                     OnPropertyChanged(nameof(AusgewählterVorschlag));
                     OnPropertyChanged(nameof(EingabeText));
                 }
@@ -93,7 +93,7 @@ namespace ToDo.ViewModel.Main
             _jsonService = jsonService;
             _dialogService = dialogService;
 
-            _aufgabenViewModel = new AufgabenViewModel(new JsonService(), new DialogService());
+            _aufgabenViewModel = new AufgabenViewModel(_jsonService, _dialogService);
 
             // this ist das gerade aktive Objekt selbst
             _verenaViewModel = new VerenaViewModel(verenaDaten, _aufgabenViewModel, this, new DialogService())
@@ -108,17 +108,19 @@ namespace ToDo.ViewModel.Main
             Winner = winner;
         }
 
-        public MainViewModel(ObservableCollection<Eintrag> mainDaten)
+        public MainViewModel(ObservableCollection<Eintrag> mainDaten, InterfaceJsonService jsonService, InterfaceDialogService dialogService)
         {
             Liste = mainDaten;
+            _jsonService = jsonService;
+            _dialogService = dialogService;
 
 
             Liste.CollectionChanged += (_, _) => Aktualisiere();
             // CollectionChanged += Nur auf Änderungen reagieren
             // (_, _) =>  Nur Methode ausführen, keine Event-Daten
             // Eventdaten add, remove, replace, move, set, man könnte z.b. Statistiken führen oder Undo-Button
-            
-            _aufgabenViewModel = new AufgabenViewModel(new JsonService(), new DialogService());
+
+            _aufgabenViewModel = new AufgabenViewModel(_jsonService, _dialogService);
         }
 
         private string _listenÜberschrift = "Superduper wichtig";
@@ -159,7 +161,7 @@ namespace ToDo.ViewModel.Main
                 ListenÜberschrift = $"Sehr vorbildlich, hier ein Eis ";
             }
             else if (Liste.Count < 5)
-            { 
+            {
                 ListenÜberschrift = $"{Liste.Count} Dinge! Wäre nett, die zu erledigen ";
             }
             else
@@ -172,7 +174,7 @@ namespace ToDo.ViewModel.Main
         }
 
         public string Punktestand => $" Alex {_alexViewModel.AlexPunkte} vs Verena {_verenaViewModel.VerenaPunkte}";
-        
+
         private string _winner;
         public string Winner
         {
@@ -198,7 +200,7 @@ namespace ToDo.ViewModel.Main
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         // Benachrichtigt alle UI-Elemente (Bindings), dass sich eine Eigenschaft geändert hat.
 
-      
+
 
         //              Buttonlogik
 
@@ -207,7 +209,7 @@ namespace ToDo.ViewModel.Main
             if (!string.IsNullOrWhiteSpace(EingabeText))
             {
                 Liste.Add(new Eintrag { Text = EingabeText });
-                EingabeText= " ";
+                EingabeText = " ";
                 //inputBox.Focus();
                 Aktualisiere();
             }
@@ -218,10 +220,10 @@ namespace ToDo.ViewModel.Main
             if (SelectedListItem != null)
             {
                 bool bestätigung = _dialogService.ShowYesNo
-                     (  "Soll das Verena machen?",
+                     ("Soll das Verena machen?",
                         "Logisch"
                      );
-                  
+
 
                 if (bestätigung)
 
@@ -240,7 +242,7 @@ namespace ToDo.ViewModel.Main
                 bool bestätigung = _dialogService.ShowYesNo
                      ("Soll das Alex machen?",
                      "Auf keinen Fall");
-                   
+
 
                 if (bestätigung)
 
@@ -267,67 +269,102 @@ namespace ToDo.ViewModel.Main
             if (index >= 0 && index < Liste.Count - 1)
                 Liste.Move(index, index + 1);
         }
-
+        private VerenaListe _verenafenster;
         public void ÖffneVerenaListe()
         {
-            var verenafenster = new VerenaListe (_verenaViewModel)
+            // null = noch nie göffnet, loaded ist geöffenet
+            if (_verenafenster == null || !_verenafenster.IsLoaded)
             {
-                DataContext = _verenaViewModel
-            };
-            verenafenster.Show();
-        }
+                _verenafenster = new VerenaListe(_verenaViewModel)
 
-        public void ÖffneAlexListe()
-        {
-            var alexfenster = new AlexListe (_alexViewModel)
-            {
-                DataContext = _alexViewModel
-            };
-            alexfenster.Show();
-        }
-
-        public void ÖffneAufgabenliste()
-        {
-            var aufgabenfenster = new Aufgabenliste(_aufgabenViewModel)
-            {
-                DataContext = _aufgabenViewModel
-            };
-            aufgabenfenster.Show(); 
-        }
-
-        public void Auswertung()
-        {
-            bool bestätigung = _dialogService.ShowYesNo
-                    ("Soll der Sieger gekürt werden?",
-                    "Ist Alex vorne?");
-              
-            if (bestätigung)
-            {
-                if (_alexViewModel.AlexPunkte > _verenaViewModel.VerenaPunkte)
                 {
-                    _dialogService.ShowMessage(
-                                "Alex hat gewonnen");
-                    Winner =    "Der letzte Sieger ist Alex";
-                }
-                else if (_alexViewModel.AlexPunkte == _verenaViewModel.VerenaPunkte)
-                   
-                    {
-                    _dialogService.ShowMessage(
-                                "Unentschieden");
-                    Winner =    "Das letzte Mal hat Niemand gewonnen";
-                    }
-                else 
-                {
-                    _dialogService.ShowMessage(
-                        "Verena hat gewonnen");
-                    Winner = "Wow, Siegerin Verena";
-                }
-                _alexViewModel.AlexPunkte = 0;
-                _verenaViewModel.VerenaPunkte = 0;
-                Aktualisiere();
-                Speichern();
+                    DataContext = _verenaViewModel
+                };
+                //wenn geschlossen, setze fenster auf null. s sender (fenster), e eventargs(hier irrelevant)
+                _verenafenster.Closed += (s, e) => _verenafenster = null;
+                _verenafenster.Show();
+            }
+            else
+            {
+                _verenafenster.Activate(); //Fenster in Vordergrund
             }
         }
+
+
+        private AlexListe _alexfenster;
+        public void ÖffneAlexListe()
+        {
+            // null = noch nie göffnet, loaded ist geöffenet
+            if (_alexfenster == null || !_alexfenster.IsLoaded)
+            {
+                _alexfenster = new AlexListe(_alexViewModel)
+
+                {
+                    DataContext = _alexViewModel
+                };
+                //wenn geschlossen, setze fenster auf null. s sender (fenster), e eventargs(hier irrelevant)
+                _alexfenster.Closed += (s, e) => _alexfenster = null;
+                _alexfenster.Show();
+            }
+            else
+            {
+                _alexfenster.Activate();//Fenster in Vordergrund
+            }
+        }
+
+        private Aufgabenliste _aufgabenfenster;
+        public void ÖffneAufgabenliste()
+        {
+            // null = noch nie göffnet, loaded ist geöffenet
+            if (_aufgabenfenster == null || !_aufgabenfenster.IsLoaded)
+            {
+                _aufgabenfenster = new Aufgabenliste(_aufgabenViewModel)
+                {
+                    DataContext = _aufgabenViewModel
+                };
+                //wenn geschlossen, setze fenster auf null. s sender (fenster), e eventargs(hier irrelevant)
+                _aufgabenfenster.Closed += (s, e) => _aufgabenfenster = null;
+                _aufgabenfenster.Show();
+            }
+            else
+            {
+                _aufgabenfenster.Activate();//Fenster in Vordergrund
+            }
+        }
+
+                public void Auswertung()
+                {
+                    bool bestätigung = _dialogService.ShowYesNo
+                            ("Soll der Sieger gekürt werden?",
+                            "Ist Alex vorne?");
+
+                    if (bestätigung)
+                    {
+                        if (_alexViewModel.AlexPunkte > _verenaViewModel.VerenaPunkte)
+                        {
+                            _dialogService.ShowMessage(
+                                        "Alex hat gewonnen");
+                            Winner = "Der letzte Sieger ist Alex";
+                        }
+                        else if (_alexViewModel.AlexPunkte == _verenaViewModel.VerenaPunkte)
+
+                        {
+                            _dialogService.ShowMessage(
+                                        "Unentschieden");
+                            Winner = "Das letzte Mal hat Niemand gewonnen";
+                        }
+                        else
+                        {
+                            _dialogService.ShowMessage(
+                                "Verena hat gewonnen");
+                            Winner = "Wow, Siegerin Verena";
+                        }
+                        _alexViewModel.AlexPunkte = 0;
+                        _verenaViewModel.VerenaPunkte = 0;
+                        Aktualisiere();
+                        Speichern();
+                    }
+                }
 
 
         // Speichern

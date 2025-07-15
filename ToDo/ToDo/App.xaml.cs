@@ -18,9 +18,9 @@ namespace ToDo
         {
             base.OnStartup(e);
             
-            var jsonService = new JsonService();
             var dialogService = new DialogService();
-            
+            var jsonService = new JsonService(dialogService);
+
             var (hauptListe, AlexListe, VerenaListe, alexPunkte, verenaPunkte, winner) = jsonService.Laden();
 
             

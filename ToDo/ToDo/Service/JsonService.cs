@@ -19,7 +19,12 @@ namespace ToDo.Service
 
         private static readonly string AufgabenDateipfad = "aufgaben.json";
 
-     
+        private readonly InterfaceDialogService _dialogService;
+
+        public JsonService(InterfaceDialogService dialogService)
+        {
+            _dialogService = dialogService;
+        }
 
         // Haupt- und Nebenlisten speichern
         public void Speichern    (ObservableCollection<Eintrag> main, ObservableCollection<Eintrag> alex, ObservableCollection<Eintrag> verena,
@@ -74,7 +79,7 @@ namespace ToDo.Service
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show("Hilfe, MayDay, Laden.... Error: hier für Gebildete " + ex.Message);
+                _dialogService.ShowMessage("Hilfe, MayDay, Laden.... Error: hier für Gebildete " + ex.Message);
                 return (new ObservableCollection<Eintrag>(), new ObservableCollection<Eintrag>(), 
                         new ObservableCollection<Eintrag>(), 0, 0, "Kein Sieger gefunden");
             }
@@ -163,7 +168,7 @@ namespace ToDo.Service
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show("Hilfe, MayDay, Laden.... Error: hier für Gebildete " + ex.Message);
+                _dialogService.ShowMessage("Hilfe, MayDay, Laden.... Error: hier für Gebildete " + ex.Message);
                 return new ObservableCollection<Aufgabe>();
             }
         }

@@ -5,22 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|c:\\users\\alex\\desktop\\projekt\\projekt\\todo\\todo\\viewmodel\\main\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|solutionrelative:todo\\viewmodel\\main\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|c:\\users\\alex\\desktop\\projekt\\projekt\\todo\\todo\\viewmodel\\aufgaben\\aufgabenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|solutionrelative:todo\\viewmodel\\aufgaben\\aufgabenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|c:\\users\\alex\\desktop\\projekt\\projekt\\todo\\todo\\viewmodel\\alex\\alexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|solutionrelative:todo\\viewmodel\\alex\\alexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|c:\\users\\alex\\desktop\\projekt\\projekt\\todo\\todo\\service\\dialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|solutionrelative:todo\\service\\dialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|c:\\users\\alex\\desktop\\projekt\\projekt\\todo\\todo\\service\\interfacedialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|solutionrelative:todo\\service\\interfacedialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,63 +14,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DialogService.cs",
-              "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\Service\\DialogService.cs",
-              "RelativeDocumentMoniker": "ToDo\\Service\\DialogService.cs",
-              "ToolTip": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\Service\\DialogService.cs",
-              "RelativeToolTip": "ToDo\\Service\\DialogService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T07:44:58.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "InterfaceDialogService.cs",
-              "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\Service\\InterfaceDialogService.cs",
-              "RelativeDocumentMoniker": "ToDo\\Service\\InterfaceDialogService.cs",
-              "ToolTip": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\Service\\InterfaceDialogService.cs",
-              "RelativeToolTip": "ToDo\\Service\\InterfaceDialogService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T07:42:29.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AlexViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\ViewModel\\Alex\\AlexViewModel.cs",
-              "RelativeDocumentMoniker": "ToDo\\ViewModel\\Alex\\AlexViewModel.cs",
-              "ToolTip": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\ViewModel\\Alex\\AlexViewModel.cs",
-              "RelativeToolTip": "ToDo\\ViewModel\\Alex\\AlexViewModel.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEUAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T07:01:25.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AufgabenViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\ViewModel\\Aufgaben\\AufgabenViewModel.cs",
-              "RelativeDocumentMoniker": "ToDo\\ViewModel\\Aufgaben\\AufgabenViewModel.cs",
-              "ToolTip": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\ViewModel\\Aufgaben\\AufgabenViewModel.cs",
-              "RelativeToolTip": "ToDo\\ViewModel\\Aufgaben\\AufgabenViewModel.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAAwI8AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T06:31:55.003Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -96,7 +28,7 @@
               "RelativeDocumentMoniker": "ToDo\\ViewModel\\Main\\MainViewModel.cs",
               "ToolTip": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\ViewModel\\Main\\MainViewModel.cs",
               "RelativeToolTip": "ToDo\\ViewModel\\Main\\MainViewModel.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAUwEIBAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAADEBAAAAAAAAAAAwwD0BAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-15T06:30:28.299Z",
               "EditorCaption": ""
