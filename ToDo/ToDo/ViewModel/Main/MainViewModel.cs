@@ -29,6 +29,8 @@ namespace ToDo.ViewModel.Main
      // Ort der Logik
     public class MainViewModel : INotifyPropertyChanged
     {
+        private readonly InterfaceJsonService _jsonService;
+        private readonly InterfaceDialogService _dialogService;
         public ObservableCollection<Eintrag> Liste { get; set; } = new();
         // Abkürzung von public ObservableCollection<string> StackListe { get; set; } = new ObservableCollection<string>();
 
@@ -85,26 +87,27 @@ namespace ToDo.ViewModel.Main
         private AufgabenViewModel _aufgabenViewModel;
 
         public MainViewModel(ObservableCollection<Eintrag> mainDaten, ObservableCollection<Eintrag> verenaDaten, ObservableCollection<Eintrag> alexDaten,
-                            int alexPunkte, int verenaPunkte, string winner)
+                            int alexPunkte, int verenaPunkte, string winner, InterfaceJsonService jsonService, InterfaceDialogService dialogService)
         {
             Liste = mainDaten;
+            _jsonService = jsonService;
+            _dialogService = dialogService;
 
-            _aufgabenViewModel = new AufgabenViewModel();
+            _aufgabenViewModel = new AufgabenViewModel(new JsonService(), new DialogService());
 
             // this ist das gerade aktive Objekt selbst
-            _verenaViewModel = new VerenaViewModel(verenaDaten, _aufgabenViewModel, this)
+            _verenaViewModel = new VerenaViewModel(verenaDaten, _aufgabenViewModel, this, new DialogService())
             {
                 VerenaPunkte = verenaPunkte
             };
-            _alexViewModel = new AlexViewModel(alexDaten, _aufgabenViewModel, this)
+            _alexViewModel = new AlexViewModel(alexDaten, _aufgabenViewModel, this, new DialogService())
             {
                 AlexPunkte = alexPunkte
             };
 
             Winner = winner;
-            
         }
-        
+
         public MainViewModel(ObservableCollection<Eintrag> mainDaten)
         {
             Liste = mainDaten;
@@ -115,7 +118,7 @@ namespace ToDo.ViewModel.Main
             // (_, _) =>  Nur Methode ausführen, keine Event-Daten
             // Eventdaten add, remove, replace, move, set, man könnte z.b. Statistiken führen oder Undo-Button
             
-            _aufgabenViewModel = new AufgabenViewModel();
+            _aufgabenViewModel = new AufgabenViewModel(new JsonService(), new DialogService());
         }
 
         private string _listenÜberschrift = "Superduper wichtig";
@@ -214,13 +217,13 @@ namespace ToDo.ViewModel.Main
         {
             if (SelectedListItem != null)
             {
-                var result = MessageBox.Show
-                    ("Soll das Verena machen?",
-                    "Logisch",
-                    MessageBoxButton.YesNo,
-                    MessageBoxImage.Question);
+                bool bestätigung = _dialogService.ShowYesNo
+                     (  "Soll das Verena machen?",
+                        "Logisch"
+                     );
+                  
 
-                if (result == MessageBoxResult.Yes)
+                if (bestätigung)
 
                 {
                     _verenaViewModel.Hinzufügen(SelectedListItem);
@@ -234,13 +237,12 @@ namespace ToDo.ViewModel.Main
         {
             if (SelectedListItem != null)
             {
-                var result = MessageBox.Show(
-                    "Soll das Alex machen?",
-                    "Logisch",
-                    MessageBoxButton.YesNo,
-                    MessageBoxImage.Question);
+                bool bestätigung = _dialogService.ShowYesNo
+                     ("Soll das Alex machen?",
+                     "Auf keinen Fall");
+                   
 
-                if (result == MessageBoxResult.Yes)
+                if (bestätigung)
 
                 {
                     _alexViewModel.Hinzufügen(SelectedListItem);
@@ -295,30 +297,28 @@ namespace ToDo.ViewModel.Main
 
         public void Auswertung()
         {
-            var result = MessageBox.Show(
-                    "Soll der Sieger gekürt werden?",
-                    "Logisch",
-                    MessageBoxButton.YesNo,
-                    MessageBoxImage.Question);
-
-            if (result == MessageBoxResult.Yes)
+            bool bestätigung = _dialogService.ShowYesNo
+                    ("Soll der Sieger gekürt werden?",
+                    "Ist Alex vorne?");
+              
+            if (bestätigung)
             {
                 if (_alexViewModel.AlexPunkte > _verenaViewModel.VerenaPunkte)
                 {
-                    MessageBox.Show(
-                        "Alex hat gewonnen");
-                    Winner = "Der letzte Sieger ist Alex";
+                    _dialogService.ShowMessage(
+                                "Alex hat gewonnen");
+                    Winner =    "Der letzte Sieger ist Alex";
                 }
                 else if (_alexViewModel.AlexPunkte == _verenaViewModel.VerenaPunkte)
                    
                     {
-                        MessageBox.Show(
-                            "Unentschieden");
-                    Winner = "Das letzte Mal hat Niemand gewonnen";
+                    _dialogService.ShowMessage(
+                                "Unentschieden");
+                    Winner =    "Das letzte Mal hat Niemand gewonnen";
                     }
                 else 
                 {
-                    MessageBox.Show(
+                    _dialogService.ShowMessage(
                         "Verena hat gewonnen");
                     Winner = "Wow, Siegerin Verena";
                 }
@@ -333,7 +333,7 @@ namespace ToDo.ViewModel.Main
         // Speichern
         public void Speichern()
         {
-            JsonService.Speichern(  Liste, 
+            _jsonService.Speichern(  Liste, 
                                     _alexViewModel.AlexListe, 
                                     _verenaViewModel.VerenaListe, 
                                     _alexViewModel.AlexPunkte, 

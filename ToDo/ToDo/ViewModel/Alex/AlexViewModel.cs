@@ -12,11 +12,13 @@ using ToDo.Model;
 using ToDo.ViewModel.Main;
 using ToDo.ViewModel.Aufgaben;
 using System.Windows;
+using ToDo.Service;
 
 namespace ToDo.ViewModel.Alex
 {
     public class AlexViewModel : INotifyPropertyChanged
     {
+        private readonly InterfaceDialogService _dialogService;
         private MainViewModel _hauptViewModel;
 
         public ObservableCollection<Eintrag> AlexListe { get; set; }
@@ -35,11 +37,12 @@ namespace ToDo.ViewModel.Alex
 
         // _name = private Variable, Name = öffentliche Eigenschaft, name = lokaler Parameter
         private AufgabenViewModel _aufgabenViewModel;
-        public AlexViewModel(ObservableCollection<Eintrag> daten, AufgabenViewModel aufgabenViewModel, MainViewModel hauptViewModel)
+        public AlexViewModel(ObservableCollection<Eintrag> daten, AufgabenViewModel aufgabenViewModel, MainViewModel hauptViewModel, InterfaceDialogService dialogService)
         {
             AlexListe = daten;
-            _aufgabenViewModel= aufgabenViewModel;
+            _aufgabenViewModel = aufgabenViewModel;
             _hauptViewModel = hauptViewModel;
+            _dialogService = dialogService;
         }
 
         public void Hinzufügen(Eintrag eintrag)
@@ -64,7 +67,7 @@ namespace ToDo.ViewModel.Alex
                 AlexPunkte += aufgabeGefunden.Punkte;
 
 
-                MessageBox.Show($"{aufgabeGefunden.Punkte} Points for the good Guy");
+                _dialogService.ShowMessage($"{aufgabeGefunden.Punkte} Points for the good Guy");
             }
 
             _hauptViewModel.Aktualisiere();

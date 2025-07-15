@@ -16,8 +16,8 @@ namespace ToDo.ViewModel.Aufgaben
 {
    public class AufgabenViewModel : INotifyPropertyChanged
     {
-        
-
+        private readonly InterfaceJsonService _jsonService;
+        private readonly InterfaceDialogService _dialogService;
         public ObservableCollection<Aufgabe> Aufgabenliste {  get; set; }
 
         public string Art { get; set; }
@@ -27,10 +27,12 @@ namespace ToDo.ViewModel.Aufgaben
      
 
         // Laden
-        public AufgabenViewModel()
+        public AufgabenViewModel(InterfaceJsonService jsonService, InterfaceDialogService dialogService)
         {
-
-            Aufgabenliste = JsonService.LadenAufgaben();
+                       
+            _jsonService = jsonService;
+            _dialogService = dialogService; 
+            Aufgabenliste = _jsonService.LadenAufgaben();
         }
       
 
@@ -126,19 +128,19 @@ namespace ToDo.ViewModel.Aufgaben
             {
                 if (!int.TryParse(tageText, out tage))
                 {
-                    MessageBox.Show("Bitte gültige Zahl bei 'Tage' eingeben.");
+                    _dialogService.ShowMessage("Bitte gültige Zahl bei 'Tage' eingeben.");
                     return;
                 }
                 if (tage < 1)
                 {
-                    MessageBox.Show("Bitte gib bei 'Tage' eine Zahl größer oder gleich 1 ein. 1 = täglich, 2 = alle 2 Tage …");
+                    _dialogService.ShowMessage("Bitte gib bei 'Tage' eine Zahl größer oder gleich 1 ein. 1 = täglich, 2 = alle 2 Tage …");
                     return;
                 }
             }
 
             if (!int.TryParse(punkteText, out int punkte))
             {
-                MessageBox.Show("Bei Punkte bitte eine Zahl eingeben.");
+                _dialogService.ShowMessage("Bei Punkte bitte eine Zahl eingeben.");
                 return;
             }
 
@@ -168,7 +170,7 @@ namespace ToDo.ViewModel.Aufgaben
         // Speichern
         public void Speichern()
         {
-            JsonService.SpeichernAufgaben(Aufgabenliste);
+            _jsonService.SpeichernAufgaben(Aufgabenliste);
         }
     }
 }

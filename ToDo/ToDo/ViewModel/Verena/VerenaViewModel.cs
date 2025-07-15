@@ -13,12 +13,14 @@ using ToDo.Model;
 using ToDo.View.Alex;
 using ToDo.ViewModel.Aufgaben;
 using ToDo.ViewModel.Main;
+using ToDo.Service;
 
 namespace ToDo.ViewModel.Verena
 {
     public class VerenaViewModel : INotifyPropertyChanged
     {
         private MainViewModel _hauptViewModel;
+        private readonly InterfaceDialogService _dialogService; 
 
         public ObservableCollection<Eintrag> VerenaListe { get; set; }
        
@@ -35,11 +37,12 @@ namespace ToDo.ViewModel.Verena
         }
 
         private AufgabenViewModel _aufgabenViewModel;
-        public VerenaViewModel(ObservableCollection<Eintrag> daten, AufgabenViewModel aufgabenViewModel, MainViewModel hauptViewModel)
+        public VerenaViewModel(ObservableCollection<Eintrag> daten, AufgabenViewModel aufgabenViewModel, MainViewModel hauptViewModel, InterfaceDialogService dialogService)
         {
             VerenaListe = daten;
             _aufgabenViewModel = aufgabenViewModel;
             _hauptViewModel = hauptViewModel;
+            _dialogService = dialogService; 
         }
 
         public void Hinzufügen(Eintrag eintrag)
@@ -61,7 +64,7 @@ namespace ToDo.ViewModel.Verena
                 VerenaPunkte += aufgabeGefunden.Punkte;
 
 
-                MessageBox.Show($"{aufgabeGefunden.Punkte} Points for the good Girl");
+                _dialogService.ShowMessage($"{aufgabeGefunden.Punkte} Points for the good Girl");
             }
             _hauptViewModel.Aktualisiere();
         }

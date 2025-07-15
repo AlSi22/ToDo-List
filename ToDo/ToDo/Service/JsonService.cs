@@ -13,7 +13,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ToDo.Service
 {
-    public static class JsonService
+    public class JsonService : InterfaceJsonService
     {
         private static readonly string Dateipfad = "daten2.json";
 
@@ -22,7 +22,7 @@ namespace ToDo.Service
      
 
         // Haupt- und Nebenlisten speichern
-        public static void Speichern    (ObservableCollection<Eintrag> main, ObservableCollection<Eintrag> alex, ObservableCollection<Eintrag> verena,
+        public void Speichern    (ObservableCollection<Eintrag> main, ObservableCollection<Eintrag> alex, ObservableCollection<Eintrag> verena,
                                         int alexPunkte, int verenaPunkte, string winner)
         {
             var daten = new GesamtDaten
@@ -43,7 +43,7 @@ namespace ToDo.Service
             File.WriteAllText(Dateipfad, json); // eigentliche Speicherung
         }
 
-        public static   (ObservableCollection<Eintrag> main, ObservableCollection<Eintrag> alex, ObservableCollection<Eintrag> verena,
+        public          (ObservableCollection<Eintrag> main, ObservableCollection<Eintrag> alex, ObservableCollection<Eintrag> verena,
                         int alexPunkte, int verenaPunkte, string winner) Laden()
             
         {
@@ -98,7 +98,7 @@ namespace ToDo.Service
 
         // Aufgabe seperat speichern
 
-        public static void SpeichernAufgaben(ObservableCollection<Aufgabe> aufgaben)
+        public void SpeichernAufgaben(ObservableCollection<Aufgabe> aufgaben)
         {
             var options = new JsonSerializerOptions
             {
@@ -141,7 +141,7 @@ namespace ToDo.Service
         }
 
         // auch beim Laden muss das Datum angepasst werden, sonst werden zuvor gespeicherte elemente zu null
-        public static ObservableCollection<Aufgabe> LadenAufgaben()
+        public ObservableCollection<Aufgabe> LadenAufgaben()
         {
             if (!File.Exists(AufgabenDateipfad))
                 return new ObservableCollection<Aufgabe>();

@@ -23,7 +23,7 @@ namespace ToDo
         public MainWindow(MainViewModel viewModel)
         {
             InitializeComponent();
-            var daten = JsonService.Laden();
+           
             DataContext = viewModel;
             // ohne Datacontext kein Binding
 

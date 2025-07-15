@@ -15,7 +15,7 @@
     "art": "Kochen",
     "tage": 1,
     "punkte": 50,
-    "aufgabeHinzugef\u00FCgt": "12.07.2025"
+    "aufgabeHinzugef\u00FCgt": "15.07.2025"
   },
   {
     "art": "Bad reinigen",
@@ -40,5 +40,11 @@
     "tage": 50,
     "punkte": 100,
     "aufgabeHinzugef\u00FCgt": "10.07.2025"
+  },
+  {
+    "art": "Staubsaugen",
+    "tage": 7,
+    "punkte": 25,
+    "aufgabeHinzugef\u00FCgt": "15.07.2025"
   }
 ]

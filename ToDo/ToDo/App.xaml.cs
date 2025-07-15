@@ -17,12 +17,14 @@ namespace ToDo
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-                   
             
-            var (hauptListe, AlexListe, VerenaListe, alexPunkte, verenaPunkte, winner) = JsonService.Laden();
+            var jsonService = new JsonService();
+            var dialogService = new DialogService();
+            
+            var (hauptListe, AlexListe, VerenaListe, alexPunkte, verenaPunkte, winner) = jsonService.Laden();
 
             
-            _hauptViewModel = new MainViewModel(hauptListe, AlexListe, VerenaListe, alexPunkte, verenaPunkte, winner);
+            _hauptViewModel = new MainViewModel(hauptListe, AlexListe, VerenaListe, alexPunkte, verenaPunkte, winner, jsonService, dialogService);
 
             // Abgleich mit Aufgaben-Liste
             _hauptViewModel.CheckAufgabenliste();
