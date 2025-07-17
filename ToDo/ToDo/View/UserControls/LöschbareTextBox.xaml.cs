@@ -18,7 +18,10 @@ using ToDo.Model;
 namespace ToDo.View.UserControls
 {
     /// <summary>
-    /// Interaktionslogik für MusterListe2.xaml
+    /// LöschbareTextBox.xaml.cs
+    
+    /// Der Platzhaltertext wird angezeigt, solange kein Benutzereingabetext vorhanden ist.
+    /// Durch Klick auf das "X"-Symbol wird der Text gelöscht und das Eingabefeld erhält erneut den Fokus.
     /// </summary>
     public partial class LöschbareTextBox : UserControl
     {

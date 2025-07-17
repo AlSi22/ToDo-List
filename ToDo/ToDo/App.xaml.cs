@@ -9,7 +9,12 @@ using ToDo.ViewModel.Main;
 
 namespace ToDo
 {
-
+    /// <summary>
+    /// App.xaml.cs
+    /// Direkt beim Start Laden der gespeicherten Daten (Aufgabenlisten, Punkte, Gewinner) 
+    /// Aufgaben prüfen, ob auf Mainliste
+    /// Beim Beenden der Anwendung wird gespeichert.
+    /// </summary>
     public partial class App : Application
     {
         private MainViewModel _hauptViewModel;

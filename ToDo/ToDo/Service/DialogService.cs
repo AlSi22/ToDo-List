@@ -7,6 +7,18 @@ using System.Threading.Tasks;
 
 namespace ToDo.Service
 {
+    /* DialogService.cs
+  
+       Möglichkeit zur Anzeige von Dialogen
+   
+       Implementiert das Interface `InterfaceDialogService`
+       So kann das UI vom ViewModel aus angesprochen werden, ohne direkt auf MessageBox zuzugreifen. 
+       Würde zu Problemen beim Unit-Test führen
+    
+       Methoden:
+            ShowMessage: Zeigt einen einfachen Hinweis-Dialog.
+            ShowYesNo: Zeigt einen Ja/Nein-Dialog und gibt das Ergebnis zurück.
+    */
     public class DialogService : InterfaceDialogService
     {
         public void ShowMessage (string message, string title = "!!!")

@@ -27,6 +27,24 @@ using ToDo.ViewModel.Aufgaben;
 namespace ToDo.ViewModel.Main
 {
     // Ort der Logik
+    /// <summary>
+    /// MainViewModel.cs
+    /// verwaltet die Hauptaufgabenliste sowie die Listen für Alex und Verena.
+    /// 
+    /// Ermöglicht das Hinzufügen, Verschieben und Zuordnen von Aufgaben, sowie das Verwalten von Vorschlägen
+    /// basierend auf Benutzereingaben.
+    ///
+    /// Speichern und Laden der Daten,
+    /// und steuert die Öffnung von Fenstern für die jeweiligen Benutzerlisten.
+    ///
+    /// Funktionen im Überblick:
+    /// - Verwaltung der Hauptaufgabenliste und der Benutzer-spezifischen Aufgabenlisten
+    /// - Dynamische Vorschlagsliste basierend auf Eingaben
+    /// - Aufgabenzuweisung an Alex oder Verena mit Benutzerbestätigung
+    /// - Bewegung von Aufgaben innerhalb der Liste (hoch/runter)
+    /// - Anzeige und Aktualisierung des Punktestands sowie Ermittlung des aktuellen Gewinners
+    /// - Öffnen und Verwalten von Nebenfenstern für Alex, Verena und die Aufgabenübersicht
+    /// </summary>
     public class MainViewModel : INotifyPropertyChanged
     {
         private readonly InterfaceJsonService _jsonService;

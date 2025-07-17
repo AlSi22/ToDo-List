@@ -16,9 +16,15 @@ using ToDo.ViewModel.Verena;
 
 namespace ToDo.View.Verena
 {
-    /// <summary>
-    /// Interaktionslogik für VerenaListe.xaml
-    /// </summary>
+    /*
+    VerenaListe.xaml.cs
+    
+    Funktionen:
+    - Konstruktor übernimmt ein ViewModel (VerenaViewModel) zur Datenbindung
+    - Button_Click-Methode: Wenn Button "EntfernVerena" geklickt wird und ein Eintrag ausgewählt ist,
+      ruft sie die Entfernen-Methode im ViewModel auf.
+    - Typprüfung zur Sicherheit eingebaut
+*/
     public partial class VerenaListe : Window
     {
         public VerenaListe(VerenaViewModel viewModel)

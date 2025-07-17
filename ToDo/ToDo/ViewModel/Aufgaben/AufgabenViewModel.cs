@@ -14,7 +14,15 @@ using ToDo.ViewModel.Main;
 
 namespace ToDo.ViewModel.Aufgaben
 {
-   public class AufgabenViewModel : INotifyPropertyChanged
+    /// <summary>
+    /// AufgabenViewModel.cs
+    /// Logik der wiederkehrenden Aufgaben
+    /// Stellt Aufgabenliste bereit, die gespeichert und geladen wird
+    /// Checkhauptliste prüft, ob die Aufgaben auf die Hauptliste gesetzt werden soll
+    /// Buttonlogik Hinzufügen und Entfernen
+    /// </summary>
+ 
+    public class AufgabenViewModel : INotifyPropertyChanged
     {
         private readonly InterfaceJsonService _jsonService;
         private readonly InterfaceDialogService _dialogService;

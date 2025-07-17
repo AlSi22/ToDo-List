@@ -18,6 +18,13 @@ using ToDo.View.Verena;
 
 namespace ToDo
 {
+    /// <summary>
+    /// MainWindow.xaml.cs
+    /// Verbindung der grafischen Oberfläche mit dem ViewModel
+    /// Weitergabe der Buttonlogik
+    /// Abfrage beim Fensterschließen
+    /// </summary>
+   
     public partial class MainWindow : Window
     {
         public MainWindow(MainViewModel viewModel)

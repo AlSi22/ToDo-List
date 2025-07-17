@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace ToDo.Model
 {
- 
-    // Ort für Daten
+
+    // Eintrag.cs
+
+    // - Text: Eintrag in die jeweiligen Listen
     public class Eintrag
     {
         public string Text { get; set; } = string.Empty;

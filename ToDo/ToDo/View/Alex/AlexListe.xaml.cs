@@ -20,9 +20,15 @@ using ToDo.ViewModel.Main;
 
 namespace ToDo.View.Alex
 {
-    /// <summary>
-    /// Interaktionslogik für Window1.xaml
-    /// </summary>
+/*
+    AlexListe.xaml.cs
+    
+    Funktionen:
+    - Konstruktor übernimmt ein ViewModel (AlexViewModel) zur Datenbindung
+    - Button_Click-Methode: Wenn Button "EntfernAlex" geklickt wird und ein Eintrag ausgewählt ist,
+      ruft sie die Entfernen-Methode im ViewModel auf.
+    - Typprüfung zur Sicherheit eingebaut
+*/
     public partial class AlexListe : Window
     {
         

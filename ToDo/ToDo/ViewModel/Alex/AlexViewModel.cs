@@ -16,6 +16,12 @@ using ToDo.Service;
 
 namespace ToDo.ViewModel.Alex
 {
+    /// <summary>
+    /// AlexViewModel.cs
+    /// ViewModel für die Aufgabenliste von Alex
+    /// Verwaltet eine ObservableCollection von Einträgen sowie Punktestand und Interaktionen mit dem Aufgabenmodell.
+    /// Verantwortlich für das Hinzufügen und Entfernen von Einträgen, inklusive Punktevergabe.
+   /// </summary>
     public class AlexViewModel : INotifyPropertyChanged
     {
         private readonly InterfaceDialogService _dialogService;

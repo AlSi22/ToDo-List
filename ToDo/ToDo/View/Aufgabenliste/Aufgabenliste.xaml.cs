@@ -18,7 +18,15 @@ using ToDo.ViewModel.Main;
 
 namespace ToDo.View.Aufgabenliste
 {
-    
+    /// <summary>
+    /// Aufgabenliste.xaml".
+    /// Dient der Verwaltung wiederkehrender Aufgaben.
+    /// 
+    /// Funktionen:
+    /// - Übergibt das AufgabenViewModel als DataContext
+    /// - Reagiert auf Button-Klicks (Hinzufügen & Entfernen)
+    /// - Speichert beim Schließen automatisch alle Aufgaben
+    /// </summary>
     public partial class Aufgabenliste : Window
     {
         private readonly AufgabenViewModel _viewModel;
@@ -43,18 +51,18 @@ namespace ToDo.View.Aufgabenliste
             switch (button.Name)
                 {
                     case    "Hinzufügen":
-
-                                        aufgabenviewModel.Hinzufügen(ArtTextBox.Text, TageTextBox.Text, PunkteTextBox.Text); 
+                                            aufgabenviewModel.Hinzufügen(ArtTextBox.Text, 
+                                            TageTextBox.Text, PunkteTextBox.Text); 
                     break;
                     
 
                     case    "Entfernen":
-                        var selected = AufgabenListbox.SelectedItem as Aufgabe;
-                        if (selected != null)
-                        {
-                            aufgabenviewModel.Entfernen(selected);
-                        }
-                        break;
+                                        var selected = AufgabenListbox.SelectedItem as Aufgabe;
+                                        if (selected != null)
+                                        {
+                                            aufgabenviewModel.Entfernen(selected);
+                                        }
+                    break;
                      
                 }
         }

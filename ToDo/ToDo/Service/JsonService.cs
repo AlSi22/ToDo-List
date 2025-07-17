@@ -13,6 +13,23 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ToDo.Service
 {
+    /* JsonService.cs
+   
+        Diese Klasse kümmert sich um das Speichern und Laden der relevanten Daten im JSON-Format.
+   
+        Verwendet bei
+        Haupt- und Benutzerlisten (Main, Alex, Verena) + Punktestände + letzter Gewinner
+        Aufgabenliste (wird separat in einer anderen Datei gespeichert)
+    
+          Dateipfade:
+            "daten2.json"  = Hauptdaten
+            "aufgaben.json" = Aufgabentabelle
+  
+          DatumsConverter für bessere lesbarkeit
+    
+          Error
+          Falls beim Laden ein Fehler auftritt, wird eine leere Sammlung zurückgegeben + Fehlermeldung
+    */
     public class JsonService : InterfaceJsonService
     {
         private static readonly string Dateipfad = "daten2.json";

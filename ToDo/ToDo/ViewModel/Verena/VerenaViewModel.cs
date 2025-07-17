@@ -17,6 +17,12 @@ using ToDo.Service;
 
 namespace ToDo.ViewModel.Verena
 {
+    /// <summary>
+    /// VerenaViewModel.cs
+    /// ViewModel für die Aufgabenliste von Verena
+    /// Verwaltet eine ObservableCollection von Einträgen sowie Punktestand und Interaktionen mit dem Aufgabenmodell.
+    /// Verantwortlich für das Hinzufügen und Entfernen von Einträgen, inklusive Punktevergabe.
+    /// </summary>
     public class VerenaViewModel : INotifyPropertyChanged
     {
         private MainViewModel _hauptViewModel;
