@@ -34,6 +34,7 @@ namespace ToDo.ViewModel.Main
         public ObservableCollection<Eintrag> Liste { get; set; } = new();
         // Abkürzung von public ObservableCollection<string> StackListe { get; set; } = new ObservableCollection<string>();
 
+
         private string _eingabeText;
         public string EingabeText
         {
@@ -42,6 +43,7 @@ namespace ToDo.ViewModel.Main
             {
                 if (_eingabeText != value)
                 {
+                    // sobald was in der Combobox eingegeben wurde, mach Vorschläge
                     _eingabeText = value;
                     OnPropertyChanged(nameof(EingabeText));
                     AktualisiereVorschläge();
@@ -52,19 +54,24 @@ namespace ToDo.ViewModel.Main
 
         private void AktualisiereVorschläge()
         {
+            // Alte Vorschläge löschen
             Vorschläge.Clear();
 
             if (string.IsNullOrWhiteSpace(EingabeText)) return;
 
+            // Abgleich Eingabe mit Aufgabenliste
             var itsamatch = _aufgabenViewModel.Aufgabenliste
-                .Where(a => a.Art.Contains(EingabeText, StringComparison.OrdinalIgnoreCase))
-                .Select(a => a.Art)
-                .Distinct()
-                .ToList();
+                            .Where(a => a.Art.Contains(EingabeText, StringComparison.OrdinalIgnoreCase))
+                            .Select(a => a.Art)
+                            // Mehrfache Treffer verhindern
+                            .Distinct()
+                            .ToList();
 
+            // alle Treffer auf Liste hinzufügen
             foreach (var v in itsamatch)
                 Vorschläge.Add(v);
         }
+        // Wenn Vorschlag in DropdownMenu ausgewählt, dann übernehmen
         private string _ausgewählterVorschlag;
         public string AusgewählterVorschlag
         {
@@ -185,7 +192,7 @@ namespace ToDo.ViewModel.Main
                 OnPropertyChanged(nameof(Winner));
             }
         }
-
+        // Abgleich ob ELement auf Liste soll
         public void CheckAufgabenliste()
         {
             _aufgabenViewModel.CheckHauptliste(Liste, _alexViewModel.AlexListe, _verenaViewModel.VerenaListe);
@@ -215,18 +222,19 @@ namespace ToDo.ViewModel.Main
             }
         }
 
+        // wer übernimmt die Aufgabe
         public void VerenaJob()
         {
             if (SelectedListItem != null)
             {
                 bool bestätigung = _dialogService.ShowYesNo
-                     ("Soll das Verena machen?",
-                        "Logisch"
-                     );
+                                                             ("Soll das Verena machen?",
+                                                                "Logisch"
+                                                             );
 
 
                 if (bestätigung)
-
+                    // wenn bestätigt, Element verschieben und von Mainliste löschen
                 {
                     _verenaViewModel.Hinzufügen(SelectedListItem);
                     Liste.Remove(SelectedListItem);
@@ -240,8 +248,8 @@ namespace ToDo.ViewModel.Main
             if (SelectedListItem != null)
             {
                 bool bestätigung = _dialogService.ShowYesNo
-                     ("Soll das Alex machen?",
-                     "Auf keinen Fall");
+                                                             ("Soll das Alex machen?",
+                                                             "Auf keinen Fall");
 
 
                 if (bestätigung)
@@ -254,6 +262,7 @@ namespace ToDo.ViewModel.Main
             }
         }
 
+        // Liste Items verschieben
         public void ObenVerschieben()
         {
             var item = SelectedListItem;
@@ -270,6 +279,8 @@ namespace ToDo.ViewModel.Main
                 Liste.Move(index, index + 1);
         }
         private VerenaListe _verenafenster;
+
+        // Öffnen der anderen Fenster
         public void ÖffneVerenaListe()
         {
             // null = noch nie göffnet, loaded ist geöffenet
@@ -332,33 +343,40 @@ namespace ToDo.ViewModel.Main
             }
         }
 
+        // Winner Winner ...
                 public void Auswertung()
                 {
                     bool bestätigung = _dialogService.ShowYesNo
-                            ("Soll der Sieger gekürt werden?",
-                            "Ist Alex vorne?");
+                                        ("Soll der Sieger gekürt werden?",
+                                        "Ist Alex vorne?");
 
                     if (bestätigung)
                     {
                         if (_alexViewModel.AlexPunkte > _verenaViewModel.VerenaPunkte)
                         {
                             _dialogService.ShowMessage(
-                                        "Alex hat gewonnen");
+                                                        "Alex hat gewonnen"
+                                                      );
                             Winner = "Der letzte Sieger ist Alex";
                         }
                         else if (_alexViewModel.AlexPunkte == _verenaViewModel.VerenaPunkte)
 
                         {
                             _dialogService.ShowMessage(
-                                        "Unentschieden");
+                                                        "Unentschieden"
+                                                      );
                             Winner = "Das letzte Mal hat Niemand gewonnen";
                         }
                         else
                         {
                             _dialogService.ShowMessage(
-                                "Verena hat gewonnen");
+                                                        "Verena hat gewonnen"
+                                                      );
                             Winner = "Wow, Siegerin Verena";
                         }
+                        
+                        // Rücksetzung der Punkte
+
                         _alexViewModel.AlexPunkte = 0;
                         _verenaViewModel.VerenaPunkte = 0;
                         Aktualisiere();

@@ -2,15 +2,18 @@
   "Liste": [],
   "AlexListe": [
     {
-      "Text": "M\u00FCll rausbringen"
+      "Text": "Kochen"
     }
   ],
   "VerenaListe": [
     {
-      "Text": "Bad reinigen"
+      "Text": "WC sauber machen"
+    },
+    {
+      "Text": "M\u00FCll rausbringen"
     }
   ],
-  "AlexPunkte": 0,
-  "VerenaPunkte": 0,
-  "Winner": "Wow, Siegerin Verena"
+  "AlexPunkte": 50,
+  "VerenaPunkte": 50,
+  "Winner": "Der letzte Sieger ist Alex"
 }

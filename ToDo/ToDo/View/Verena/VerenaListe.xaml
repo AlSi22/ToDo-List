@@ -13,29 +13,35 @@
             <RowDefinition Height="200"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ListBox    AlternationCount="2"
+        <StackPanel>
+            <TextBlock Text=        "Verenas To-dos" 
+                            FontWeight="Bold" FontSize ="20" FontFamily="Comic Sans MS" 
+                            Margin="5,10,5,10" TextAlignment="Center" Foreground="#F08080"  
+            />
+
+            <ListBox    AlternationCount="2"
                     x:Name="VerenaListBox"
                     ItemsSource="{Binding VerenaListe}"
                     Width="250" Height="175"
                     Background="#F08080">
 
-            <ListBox.ItemContainerStyle>
-                <Style TargetType="ListBoxItem">
-                    <Style.Triggers>
-                        <Trigger Property="ItemsControl.AlternationIndex" Value="1">
-                            <Setter Property="Background" Value="#F01000"/>
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Style.Triggers>
+                            <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                                <Setter Property="Background" Value="#F01000"/>
 
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </ListBox.ItemContainerStyle>
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Text}" FontWeight="Bold" VerticalAlignment="Center" Foreground="#4682B4"/>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Text}" FontWeight="Bold" VerticalAlignment="Center" Foreground="#4682B4"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition  Width="125"/>
@@ -54,7 +60,10 @@
 
             <TextBlock          Foreground="#F08080" 
                                 Grid.Column="1" Height="50" Width="100" FontSize="14" FontWeight="Bold"
-                                Text="{Binding VerenaPunkte}">
+                                VerticalAlignment="Center"
+                                TextWrapping="Wrap">
+                                <Run Text="{Binding VerenaPunkte}"/>
+                                <Run Text=" Punkte insgesamt"/>
             </TextBlock>
         </Grid>
     </Grid>

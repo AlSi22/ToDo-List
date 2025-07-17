@@ -1,10 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\",
+  "WorkspaceRootPath": "C:\\Users\\alexa\\Desktop\\Dekra\\GitHub\\wpf\\Projekt\\ToDo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|c:\\users\\alex\\desktop\\projekt\\projekt\\todo\\todo\\viewmodel\\main\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|c:\\users\\alexa\\desktop\\dekra\\github\\wpf\\projekt\\todo\\todo\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|solutionrelative:todo\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|c:\\users\\alexa\\desktop\\dekra\\github\\wpf\\projekt\\todo\\todo\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|solutionrelative:todo\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|c:\\users\\alexa\\desktop\\dekra\\github\\wpf\\projekt\\todo\\todo\\viewmodel\\main\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|solutionrelative:todo\\viewmodel\\main\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|c:\\users\\alexa\\desktop\\dekra\\github\\wpf\\projekt\\todo\\todo\\service\\jsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|solutionrelative:todo\\service\\jsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|c:\\users\\alexa\\desktop\\dekra\\github\\wpf\\projekt\\todo\\todo\\service\\dialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A8DBE12-8D0C-4687-8349-BA55BF9E6785}|ToDo\\ToDo.csproj|solutionrelative:todo\\service\\dialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,15 +39,62 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\ViewModel\\Main\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "ToDo\\ViewModel\\Main\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\Alex\\Desktop\\Projekt\\Projekt\\ToDo\\ToDo\\ViewModel\\Main\\MainViewModel.cs",
-              "RelativeToolTip": "ToDo\\ViewModel\\Main\\MainViewModel.cs",
-              "ViewState": "AgIAADEBAAAAAAAAAAAwwD0BAAA8AAAAAAAAAA==",
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\alexa\\Desktop\\Dekra\\GitHub\\wpf\\Projekt\\ToDo\\ToDo\\App.xaml.cs",
+              "RelativeDocumentMoniker": "ToDo\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\alexa\\Desktop\\Dekra\\GitHub\\wpf\\Projekt\\ToDo\\ToDo\\App.xaml.cs",
+              "RelativeToolTip": "ToDo\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T06:30:28.299Z",
+              "WhenOpened": "2025-07-17T06:23:48.261Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\alexa\\Desktop\\Dekra\\GitHub\\wpf\\Projekt\\ToDo\\ToDo\\App.xaml",
+              "RelativeDocumentMoniker": "ToDo\\App.xaml",
+              "ToolTip": "C:\\Users\\alexa\\Desktop\\Dekra\\GitHub\\wpf\\Projekt\\ToDo\\ToDo\\App.xaml",
+              "RelativeToolTip": "ToDo\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-17T06:23:36.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JsonService.cs",
+              "DocumentMoniker": "C:\\Users\\alexa\\Desktop\\Dekra\\GitHub\\wpf\\Projekt\\ToDo\\ToDo\\Service\\JsonService.cs",
+              "RelativeDocumentMoniker": "ToDo\\Service\\JsonService.cs",
+              "ToolTip": "C:\\Users\\alexa\\Desktop\\Dekra\\GitHub\\wpf\\Projekt\\ToDo\\ToDo\\Service\\JsonService.cs",
+              "RelativeToolTip": "ToDo\\Service\\JsonService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T11:55:29.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DialogService.cs",
+              "DocumentMoniker": "C:\\Users\\alexa\\Desktop\\Dekra\\GitHub\\wpf\\Projekt\\ToDo\\ToDo\\Service\\DialogService.cs",
+              "RelativeDocumentMoniker": "ToDo\\Service\\DialogService.cs",
+              "ToolTip": "C:\\Users\\alexa\\Desktop\\Dekra\\GitHub\\wpf\\Projekt\\ToDo\\ToDo\\Service\\DialogService.cs",
+              "RelativeToolTip": "ToDo\\Service\\DialogService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T11:55:20.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\alexa\\Desktop\\Dekra\\GitHub\\wpf\\Projekt\\ToDo\\ToDo\\ViewModel\\Main\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "ToDo\\ViewModel\\Main\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\alexa\\Desktop\\Dekra\\GitHub\\wpf\\Projekt\\ToDo\\ToDo\\ViewModel\\Main\\MainViewModel.cs",
+              "RelativeToolTip": "ToDo\\ViewModel\\Main\\MainViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T10:06:35.464Z"
             }
           ]
         }

@@ -3,19 +3,19 @@
     "art": "Einkaufen",
     "tage": 2,
     "punkte": 50,
-    "aufgabeHinzugef\u00FCgt": "14.07.2025"
+    "aufgabeHinzugef\u00FCgt": "16.07.2025"
   },
   {
     "art": "M\u00FCll rausbringen",
     "tage": 1,
     "punkte": 100,
-    "aufgabeHinzugef\u00FCgt": "15.07.2025"
+    "aufgabeHinzugef\u00FCgt": "17.07.2025"
   },
   {
     "art": "Kochen",
     "tage": 1,
     "punkte": 50,
-    "aufgabeHinzugef\u00FCgt": "15.07.2025"
+    "aufgabeHinzugef\u00FCgt": "17.07.2025"
   },
   {
     "art": "Bad reinigen",
@@ -27,13 +27,13 @@
     "art": "WC sauber machen",
     "tage": 7,
     "punkte": 100,
-    "aufgabeHinzugef\u00FCgt": "09.07.2025"
+    "aufgabeHinzugef\u00FCgt": "16.07.2025"
   },
   {
     "art": "Gelben Sack wegbringen",
     "tage": 7,
     "punkte": 50,
-    "aufgabeHinzugef\u00FCgt": "09.07.2025"
+    "aufgabeHinzugef\u00FCgt": "16.07.2025"
   },
   {
     "art": "Keller aufr\u00E4umen",
@@ -46,5 +46,23 @@
     "tage": 7,
     "punkte": 25,
     "aufgabeHinzugef\u00FCgt": "15.07.2025"
+  },
+  {
+    "art": "K\u00FCche reinigen",
+    "tage": 3,
+    "punkte": 50,
+    "aufgabeHinzugef\u00FCgt": "17.07.2025"
+  },
+  {
+    "art": "Reinigung Dachrinne",
+    "tage": 100,
+    "punkte": 100,
+    "aufgabeHinzugef\u00FCgt": "17.07.2025"
+  },
+  {
+    "art": "Abwaschen",
+    "tage": 1,
+    "punkte": 25,
+    "aufgabeHinzugef\u00FCgt": "17.07.2025"
   }
 ]
