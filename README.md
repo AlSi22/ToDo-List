@@ -1,16 +1,16 @@
-Eine To-Do-App in C# mit WPF und MVVM-Struktur.
+Zeitraum: Projektstart 04.07.2025 Projekatabgabe 18.07.2025
 
-Funktionen (Stand: 17.07.2025)
+To-Do-App in C# mit WPF und MVVM-Struktur.
+
+Funktionen 
 Aufgaben erstellen, bearbeiten und löschen,
 Aufgaben persistent speichern (JSON),
 Wiederkehrende Aufgaben mit einstellbarem Intervall,
 Sortierung,
 Separate Fenster für Aufgabenaufteilung
 
-Ziel
-Diese Anwendung entsteht im Rahmen meiner Umschulung zum Fachinformatiker für Anwendungsentwicklung.
-Der Abgabetermin ist der 18.07.2025.
-Aktuell wird eine abschließende Dokumentation verfasst
+Das Projekt wurde in dieser Form abgegeben und dringende Verbesserungen u.a. in der Dokumentation aufgelistet
+
 
 Technologien
 C#
